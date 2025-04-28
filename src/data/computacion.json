@@ -1,0 +1,23 @@
+[
+    {
+        "name":"Computadora Dell Core I5 6ta Gen 16gb 1tb Monitor 22",
+        "price":"$4000.00",
+        "url":"/Computacion/pc.png"
+    },
+    {
+        "name":"Ratón Alámbrico Ratón De Oficina Silencioso",
+        "price":"$180.00",
+        "url":"/Computacion/mouse.png"
+    },
+    {
+        "name":"Memoria Usb 2.0 Adata De 32 Gb",
+        "price":"$120.00",
+        "url":"/Computacion/usb.png"
+    },
+    {
+        "name":"Router Tp-Link Ax3000 Wifi6 Archer Ax53 Doble Banda",
+        "price":"$360.00",
+        "url":"/Computacion/router.png"
+    }
+
+]

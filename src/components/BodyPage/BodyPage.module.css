@@ -1,0 +1,162 @@
+@import "../../var.css";
+
+@media screen and (max-width:412px){
+.container {
+  background: var(--color-bg-white);
+  width: 412px;
+  height: 407px;
+  margin-top: 28px;
+}
+
+.title {
+  color: var(--color-text-blue);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 25px;
+}
+
+.fornitures {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+}
+
+.desk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 195px;
+  height: 145px;
+  flex-shrink: 0;
+  background-color: var(--color-bg-softblue);
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.shelf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 145px;
+  flex-shrink: 0;
+  background-color: var(--color-bg-softblue);
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.shelf img {
+  width: 142.568px;
+  height: 51px;
+  flex-shrink: 0;
+  aspect-ratio: 142.57/51;
+}
+
+.chair {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 95px;
+  flex-shrink: 0;
+  background-color: var(--color-bg-softblue);
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.rack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 95px;
+  flex-shrink: 0;
+  background-color: var(--color-bg-softblue);
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 95px;
+  flex-shrink: 0;
+  background-color: var(--color-bg-softblue);
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.fornitures p {
+  color: var(--color-text-blue);
+  text-align: left;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 8px;
+}
+
+/* SECCION DE ROPA */
+
+.clothes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.cloth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.clothImg {
+  display: flex;
+  justify-content: center;
+  width: 160px;
+  height: 125px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: #d3d3d3;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.computingImg{
+  display: flex;
+  justify-content: center;
+  width: 160px;
+  height: 125px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: var(--color-bg-darkblue);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.cloth .name p {
+  width: 157px;
+  height: 28px;
+  flex-shrink: 0;
+  color: var(--color-text-blue);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.cloth .price p {
+
+  color: var(--color-text-blue);
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+}

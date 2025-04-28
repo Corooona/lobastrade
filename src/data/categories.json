@@ -1,0 +1,23 @@
+[
+    {
+        "title":"Ofertas",
+        "src":"/Categories/offer.png"
+    },
+    {
+        "title":"Ropa",
+        "src":"/Categories/cloth.png"
+    },
+    {
+        "title":"Basicos",
+        "src":"/Categories/grocery.png"
+    },
+    {
+        "title":"Hogar",
+        "src":"/Categories/home.png"
+    },
+    {
+        "title":"Belleza",
+        "src":"/Categories/beauty.png"
+    }
+
+]

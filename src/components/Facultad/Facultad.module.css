@@ -1,0 +1,40 @@
+@import "../../var.css";
+
+@media screen and (max-width:412px){
+  .container {
+    background-color: var(--color-bg-darkblue);
+    height: 42px;
+    display: flex;
+    opacity: 0.8;
+    flex-direction: row;
+  }
+  
+  .location {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    width: 15%;
+    height: 42px;
+  }
+  
+  .location img {
+    width: 18.096px;
+    height: 24px;
+    flex-shrink: 0;
+    aspect-ratio: 18.1/24;
+  }
+  
+  .message{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      
+      color: #FFF;
+  font-family: "Average Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  }
+    
+}

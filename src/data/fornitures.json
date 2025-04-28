@@ -1,0 +1,27 @@
+[
+    {
+        "name":"LoboEscritorios",
+        "src":"./Fornitures/escritorio.png",
+        "class":"desk"
+    },
+    {
+        "name":"LoboRepisas",
+        "src":"./Fornitures/repisa.png",
+        "class":"shelf"
+    },
+    {
+        "name":"LoboSillas",
+        "src":"./Fornitures/silla.png",
+        "class":"chair"
+    },
+    {
+        "name":"LoboPercheros",
+        "src":"./Fornitures/percheros.png",
+        "class":"rack"
+    },
+    {
+        "name":"LoboMesas",
+        "src":"./Fornitures/mesa.png",
+        "class":"table"
+    }
+]
