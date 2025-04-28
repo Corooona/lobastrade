@@ -24,7 +24,7 @@ export const Menu = ({ isLoggedIn, onLogin }) => {
           <h3>{isLoggedIn ? "Prueba" : "Bienvenido"}</h3>
 
           {isLoggedIn ? (
-            <a className={styles.linkProfile} onClick={navigate('/profile')} >Mi perfil</a>
+            <a className={styles.linkProfile} onClick={() => navigate('/profile')} >Mi perfil</a>
           ) : (
             <p>Ingresa a tu cuenta para ver tus compras, favoritos, etc.</p>
           )}
@@ -66,24 +66,22 @@ export const Menu = ({ isLoggedIn, onLogin }) => {
             <a href="">Soporte</a>
           </li>
 
-          {isLoggedIn ? (
+          {isLoggedIn && (
             <li>
               <img src={sell} alt="" />
-              <a href="">Vender</a>
+              <a onClick={() => navigate("/sold")}>Vender</a>
             </li>
-          ) : (
-            ""
           )}
 
-          {isLoggedIn ? (
-            <li onClick={()=>{
-              onLogin(false); navigate('/');
-            }}>
+          {isLoggedIn && (
+            <li>
               <img src={exit} alt="" />
-              <a href="">Exit</a>
+
+              <a onClick={() => {
+                onLogin(false);
+                navigate('/');
+              }} href="/">Salir</a>
             </li>
-          ) : (
-            ""
           )}
         </ul>
       </div>

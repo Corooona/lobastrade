@@ -140,6 +140,7 @@ flex-shrink: 0;
 .list li a{
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
 
 
