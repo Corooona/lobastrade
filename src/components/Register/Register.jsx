@@ -20,7 +20,9 @@ export const Register=()=>{
            </div>
    
            <div className={styles.buttons}>
-             <a onClick={()=>navigate("/nameRegister")} >Continuar</a>
+             <a onClick={()=>{
+              
+              navigate("/nameRegister");}} >Continuar</a>
            </div>
    
            <div className={styles.end}>

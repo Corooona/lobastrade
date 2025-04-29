@@ -16,6 +16,7 @@ import { Celular } from "./components/Register/Celular";
 import { ContraRegister } from "./components/Register/ContraRegister";
 import { Profile } from "./components/Profile/Profile";
 import { Sold } from "./components/Sold/Sold";
+import {Buy} from "./components/Buy/Buy"
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -48,11 +49,13 @@ function App() {
 
         <Route path="/celRegister" element={<Celular/>}></Route>
 
-        <Route path="/contraRegister" element={< ContraRegister />}></Route>
+        <Route path="/contraRegister" element={< ContraRegister onLogin={handleLogin} />}></Route>
 
         <Route path="/profile" element={<Profile isLoggedIn={isLoggedIn} />}></Route>
 
         <Route path="/sold" element={<Sold isLoggedIn={isLoggedIn} />}></Route>
+
+        <Route path="/buy" element={<Buy isLoggedIn={isLoggedIn} />}></Route>
       </Routes>
     </Router>
   );

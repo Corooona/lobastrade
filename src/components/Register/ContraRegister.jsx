@@ -3,8 +3,13 @@ import { useNavigate } from "react-router-dom";
 import logo from "../../assets/Header/lobastrade.png";
 import styles from "./ContraRegister.module.css";
 
-export const ContraRegister=()=>{
+export const ContraRegister=({ onLogin })=>{
    const navigate = useNavigate();
+
+   const handleSession = () => {
+    onLogin();
+    navigate('/');
+  };
      return (
        <section className={styles.loginContainer}>
          <div className={styles.header}>
@@ -21,7 +26,8 @@ export const ContraRegister=()=>{
            </div>
    
            <div className={styles.buttons}>
-             <a onClick={()=>navigate("/")} >Continuar</a>
+             <a onClick={
+              handleSession} >Continuar</a>
            </div>
    
            <div className={styles.end}>
