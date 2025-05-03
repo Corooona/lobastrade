@@ -52,7 +52,7 @@ export const ComprarPago = ({ car, setCar, isLoggedIn }) => {
 
     return (
         <div>
-            <Header car={car} />
+            <Header car={car} isLoggedIn={isLoggedIn} />
             <div className={styles.container}>
                 <h1>Resumen de tu compra</h1>
                 <section className={styles.cartItems}>
