@@ -4,12 +4,12 @@ import { Facultad } from "../Facultad/Facultad"
 import { Footer } from "../Footer/Foooter"
 import { useParams } from "react-router-dom"
 import styles from "./Buy.module.css";
-
+import { useNavigate } from "react-router-dom"
 import fornitures from '../../data/fornitures.json'
-export const Buy = ({ isLoggedIn }) => {
-    const { id } = useParams();
 
-    const [car, setCar]=useState([]);
+export const Buy = ({ car, setCar, isLoggedIn }) => {
+    const { id } = useParams();
+    const navigate = useNavigate();
 
     let product=null;
 
@@ -25,6 +25,10 @@ export const Buy = ({ isLoggedIn }) => {
     const addToCar = (prod) => {
         setCar(prevCar => [...prevCar, prod]); // Esto agrega el producto correctamente al carrito
     };
+
+    const handleBuy=(prod)=>{
+        navigate("/comprar-pago", {state: {product:prod}});
+    }
     
     return (
         <div>
@@ -43,7 +47,7 @@ export const Buy = ({ isLoggedIn }) => {
                                 Agregar al carrito
                             </button>
 
-                            <button>
+                            <button onClick={()=>handleBuy(prod)}>
                                 Comprar
                             </button>
                             </div>

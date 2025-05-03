@@ -6,25 +6,25 @@
         "products":[{
             "name":"Esritorio de madera",
             "src":"/Fornitures/escritorio.png",
-            "price":"$1560",
+            "price":1560,
             "class":"desk1"
         },
         {
             "name":"Esritorio de abedul",
             "src":"/Fornitures/desk/escritorio2.png",
-            "price":"$2890",
+            "price":2890,
             "class":"desk2"
         },
         {
             "name":"Esritorio de metal",
             "src":"/Fornitures/desk/escritorio3.png",
-            "price":"$879",
+            "price":879,
             "class":"desk3"
         },
         {
             "name":"Esritorio de madera",
             "src":"/Fornitures/desk/escritorio4.png",
-            "price":"$879",
+            "price":870,
             "class":"desk4"
         }]
     },

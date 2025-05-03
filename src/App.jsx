@@ -59,9 +59,9 @@ function App() {
 
           <Route path="/sold" element={<Sold isLoggedIn={isLoggedIn} />}></Route>
 
-          <Route path="/buy/:id" element={<Buy isLoggedIn={isLoggedIn} />}></Route>
+          <Route path="/buy/:id" element={<Buy car={car} setCar={setCar} isLoggedIn={isLoggedIn} />}></Route>
 
-          <Route path="/comprar-pago" element={<ComprarPago car={car} />} ></Route>
+          <Route path="/comprar-pago" element={<ComprarPago car={car} setCar={setCar} isLoggedIn={isLoggedIn} />} ></Route>
         </Routes>
       </Router>
   
