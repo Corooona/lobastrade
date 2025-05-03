@@ -3,11 +3,12 @@ import { Header } from '../Header/Header';
 import { Facultad } from '../Facultad/Facultad';
 import { Footer } from '../Footer/Foooter';
 import styles from './Sold.module.css';
-
+import { useState } from 'react';
 export const Sold =({ isLoggedIn })=> {
+    const [car, setCar] = useState([]);  // Inicializa un array vacío para el carrito
     return (
         <div>
-            <Header isLoggedIn={isLoggedIn} />
+            <Header isLoggedIn={isLoggedIn} car={car}/>
             <Facultad isLoggedIn={isLoggedIn}></Facultad>
             <section className={styles.container}>
                 <div className={styles.mainMessage}>

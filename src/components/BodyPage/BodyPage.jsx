@@ -7,6 +7,8 @@ import fornitures from "../../data/fornitures.json";
 import secondclothes from "../../data/secondclothes.json";
 import computing from "../../data/computacion.json";
 
+import { Link } from "react-router-dom";
+
 export const BodyPage = ({ isLoggedIn }) => {
   return (
     <section>
@@ -28,6 +30,9 @@ export const BodyPage = ({ isLoggedIn }) => {
                 >
                   <img src={forniture.src} alt={forniture.name} />
                 </div>
+                
+                <Link to={`/buy/${id}`}>Comprar</Link>
+                
                 <p>{forniture.name}</p>
               </div>
             );

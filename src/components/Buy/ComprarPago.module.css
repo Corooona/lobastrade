@@ -1,0 +1,70 @@
+@import '../../var.css';
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+.cartItems {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.cartItem {
+  display: flex;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartItem img {
+  width: 100px;
+  height: 75px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.paymentForm {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.paymentForm input {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.paymentForm button {
+  padding: 10px;
+  font-size: 18px;
+  background-color: var(--color-primary);
+  color: var(--color-bg-darkblue);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.paymentForm button:hover {
+  background-color: var(--color-secondary);
+}

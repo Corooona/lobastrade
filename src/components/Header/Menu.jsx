@@ -49,21 +49,21 @@ export const Menu = ({ isLoggedIn, onLogin }) => {
         <ul className={styles.list}>
           <li>
             <img src={home} alt="Home" />
-            <a href="">Inicio</a>
+            <a onClick={() => navigate("/")}>Inicio</a>
           </li>
           <li>
             <img src={offers} alt="Offers" />
-            <a href="">Ofertas</a>
+            <a onClick={() => navigate("/")}>Ofertas</a>
           </li>
 
           <li>
             <img src={categories} alt="Categories" />
-            <a href="">Categorias</a>
+            <a onClick={() => navigate("/")}>Categorias</a>
           </li>
 
           <li>
             <img src={support} alt="Support" />
-            <a href="">Soporte</a>
+            <a onClick={() => navigate("/")}>Soporte</a>
           </li>
 
           {isLoggedIn && (

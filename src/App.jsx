@@ -16,49 +16,56 @@ import { Celular } from "./components/Register/Celular";
 import { ContraRegister } from "./components/Register/ContraRegister";
 import { Profile } from "./components/Profile/Profile";
 import { Sold } from "./components/Sold/Sold";
-import {Buy} from "./components/Buy/Buy"
+import { Buy } from "./components/Buy/Buy"
+import { ComprarPago } from "./components/Buy/ComprarPago";
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => {
     setIsLoggedIn(true);
   };
+  const [car, setCar] = useState([]);  // Inicializa un array vacío para el carrito
+
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div className={styles.App}>
-              <Header isLoggedIn={isLoggedIn} onLogin={handleLogin}></Header>
-              <Facultad isLoggedIn={isLoggedIn}></Facultad>
-              <Categories></Categories>
-              <BodyPage isLoggedIn={isLoggedIn}></BodyPage>
-              <Footer></Footer>
-            </div>
-          }
-        ></Route>
+      <Router>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className={styles.App}>
+                <Header isLoggedIn={isLoggedIn} onLogin={handleLogin} car={car}></Header>
+                <Facultad isLoggedIn={isLoggedIn}></Facultad>
+                <Categories></Categories>
+                <BodyPage isLoggedIn={isLoggedIn}></BodyPage>
+                <Footer></Footer>
+              </div>
+            }
+          ></Route>
 
-        <Route path="/login" element={<Login></Login>}></Route>
+          <Route path="/login" element={<Login></Login>}></Route>
 
-        <Route path="/contra" element={<Contra onLogin={handleLogin} />}></Route>
+          <Route path="/contra" element={<Contra onLogin={handleLogin} />}></Route>
 
-        <Route path="/register" element={<Register></Register>}></Route>
+          <Route path="/register" element={<Register></Register>}></Route>
 
-        <Route path="/nameRegister" element={<Name />}></Route>
+          <Route path="/nameRegister" element={<Name />}></Route>
 
-        <Route path="/celRegister" element={<Celular/>}></Route>
+          <Route path="/celRegister" element={<Celular />}></Route>
 
-        <Route path="/contraRegister" element={< ContraRegister onLogin={handleLogin} />}></Route>
+          <Route path="/contraRegister" element={< ContraRegister onLogin={handleLogin} />}></Route>
 
-        <Route path="/profile" element={<Profile isLoggedIn={isLoggedIn} />}></Route>
+          <Route path="/profile" element={<Profile isLoggedIn={isLoggedIn} />}></Route>
 
-        <Route path="/sold" element={<Sold isLoggedIn={isLoggedIn} />}></Route>
+          <Route path="/sold" element={<Sold isLoggedIn={isLoggedIn} />}></Route>
 
-        <Route path="/buy" element={<Buy isLoggedIn={isLoggedIn} />}></Route>
-      </Routes>
-    </Router>
-  );
+          <Route path="/buy/:id" element={<Buy isLoggedIn={isLoggedIn} />}></Route>
+
+          <Route path="/comprar-pago" element={<ComprarPago car={car} />} ></Route>
+        </Routes>
+      </Router>
+  
+      );
 }
 
-export default App;
+      export default App;

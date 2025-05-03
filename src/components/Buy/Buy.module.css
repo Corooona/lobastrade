@@ -1,0 +1,49 @@
+@import '../../var.css';
+
+.buyContainer{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buyContainer img{
+    width: 200px;
+    height: 150px;
+}
+
+
+.product-card {
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: var(--color-bg-darkblue);
+}
+
+.product-card h1{
+    color: aliceblue;
+}
+
+.product-card p{
+    color: aliceblue;
+}
+
+.buttonsBuy{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.buttonsBuy button{
+    background-color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    color: var(--color-bg-darkblue);
+    cursor: pointer;
+}

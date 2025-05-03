@@ -63,3 +63,42 @@
     aspect-ratio: 32.98/20;
   }
 }
+
+
+/* CARRITO */
+.carDetails {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.carDetails h2 {
+  margin-top: 0;
+}
+
+.carDetails ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.carDetails li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 10px;
+  gap: 10px;
+}
+
+.carDetails img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
