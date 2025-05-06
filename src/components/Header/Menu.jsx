@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Menu.module.css";
 
 import picture from "../../assets/Header/Menu/profile.png";
@@ -13,6 +13,16 @@ import { useNavigate } from "react-router-dom";
 
 export const Menu = ({ isLoggedIn, onLogin }) => {
   const navigate = useNavigate();
+  const [userDetails, setUserDetails] = useState(null);
+
+  useEffect(() => {
+    // Obtener los detalles del usuario desde sessionStorage
+    const storedUserDetails = JSON.parse(sessionStorage.getItem("userDetails"));
+    if (storedUserDetails) {
+      setUserDetails(storedUserDetails);
+    }
+  }, []); // Solo se ejecuta una vez cuando el componente se monta
+
   return (
     <div className={styles.menu}>
       <div className={styles.user}>
@@ -21,10 +31,11 @@ export const Menu = ({ isLoggedIn, onLogin }) => {
         </div>
 
         <div className={styles.infoUser}>
-          <h3>{isLoggedIn ? "Prueba" : "Bienvenido"}</h3>
+          {/* Si el usuario está logueado, mostrar su nombre, si no mostrar 'Bienvenido' */}
+          <h3>{isLoggedIn && userDetails ? `Hola, ${userDetails.firstName}` : "Bienvenido"}</h3>
 
           {isLoggedIn ? (
-            <a className={styles.linkProfile} onClick={() => navigate('/profile')} >Mi perfil</a>
+            <a className={styles.linkProfile} onClick={() => navigate('/profile')}>Mi perfil</a>
           ) : (
             <p>Ingresa a tu cuenta para ver tus compras, favoritos, etc.</p>
           )}
@@ -40,8 +51,7 @@ export const Menu = ({ isLoggedIn, onLogin }) => {
             <div className={styles.personalizeProfileMessage}>
               <p>Recuerda que puedes personalizar tu perfil</p>
             </div>
-          )
-          }
+          )}
         </div>
       </div>
 
@@ -76,7 +86,6 @@ export const Menu = ({ isLoggedIn, onLogin }) => {
           {isLoggedIn && (
             <li>
               <img src={exit} alt="" />
-
               <a onClick={() => {
                 onLogin(false);
                 navigate('/');
