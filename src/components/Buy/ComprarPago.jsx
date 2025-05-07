@@ -15,6 +15,8 @@ export const ComprarPago = ({ car, setCar, isLoggedIn }) => {
         address: ""
     });
 
+    const [error, setError] = useState("");  // Para mostrar mensajes de error
+
     // Función para eliminar un producto del carrito
     const removeProduct = (index) => {
         const updatedCar = car.filter((_, i) => i !== index);  // Eliminar el producto en el índice específico
@@ -35,8 +37,27 @@ export const ComprarPago = ({ car, setCar, isLoggedIn }) => {
         });
     };
 
+    // Validar el número de tarjeta de crédito (solo números y exactamente 16 dígitos)
+    const validateCreditCard = (cardNumber) => {
+        // Solo permitir números
+        const numericCardNumber = cardNumber.replace(/[^0-9]/g, "");
+        if (numericCardNumber.length > 16) {
+            setError("El número de tarjeta debe ser de 16 dígitos.");
+        } else {
+            setError("");  // Limpiar error si es válido
+        }
+        return numericCardNumber;
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Validar la tarjeta antes de proceder
+        if (paymentDetails.creditCard.length !== 16) {
+            setError("El número de tarjeta debe ser de 16 dígitos.");
+            return;
+        }
+
         alert("Compra realizada con éxito!");
     };
 
@@ -100,9 +121,14 @@ export const ComprarPago = ({ car, setCar, isLoggedIn }) => {
                         name="creditCard"
                         placeholder="Número de Tarjeta de Crédito"
                         value={paymentDetails.creditCard}
-                        onChange={handleInputChange}
+                        onChange={(e) => setPaymentDetails({
+                            ...paymentDetails,
+                            creditCard: validateCreditCard(e.target.value)
+                        })}
+                        maxLength="16"  // Limitar a 16 caracteres
                         required
                     />
+                    {error && <p className={styles.error}>{error}</p>} {/* Mostrar mensaje de error */}
                     <input
                         type="text"
                         name="address"
